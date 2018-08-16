@@ -1,0 +1,22 @@
+<div class="form-group">
+	<h1>List of Actors and Actress work for at least one Movie and one TV episode in December 2017</h1>
+	<img id="mySpinner" src="resources/image/spinner2.gif" ng-if="loading" />
+	<br>
+	<br>
+	<table align="center" border="1" class="table table-hover table-bordered table-striped" ng-if="!loading">
+		<thead>
+			<tr>
+				<th class="alignment">Actor/Actress Name</th>
+				<th class="alignment">Movie Name</th>
+				<th class="alignment">Tv Show Name</th>
+			</tr>
+		</thead>
+		 <tbody>
+            <tr ng-repeat="cast in allMovieTVShowCast">
+                <td class="alignment">{{cast.castName}}</td>
+                <td class="alignment">{{cast.movieName}}</td>
+                <td class="alignment">{{cast.tvShowName}}</td>
+            </tr>
+        </tbody>
+	</table>
+</div>
